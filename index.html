@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Product Description</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .endpoint {
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>API Product Description</h1>
+    </header>
+
+    <section>
+        <div class="endpoint">
+            <h2>GET /products/{product_id}</h2>
+            <p>Retrieve information about a specific product.</p>
+            <h3>Request</h3>
+            <code>{ "product_id": 123 }</code>
+            <h3>Response</h3>
+            <code>{ "id": 123, "name": "Sample Product", "price": 19.99 }</code>
+        </div>
+
+        <div class="endpoint">
+            <h2>POST /products</h2>
+            <p>Create a new product.</p>
+            <h3>Request</h3>
+            <code>{ "name": "New Product", "price": 29.99 }</code>
+            <h3>Response</h3>
+            <code>{ "id": 456, "name": "New Product", "price": 29.99 }</code>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2024 API Product Description
+    </footer>
+</body>
+</html>
