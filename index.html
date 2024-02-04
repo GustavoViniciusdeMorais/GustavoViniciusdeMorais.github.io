@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Product Description</title>
+    <title>API Description</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
@@ -15,8 +16,8 @@
         header {
             background-color: #333;
             color: white;
-            padding: 1em;
             text-align: center;
+            padding: 1em;
         }
 
         section {
@@ -26,26 +27,29 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-
-        h1 {
             color: #333;
         }
 
-        h2 {
+        h1 {
             color: #007BFF;
+        }
+
+        h2 {
+            color: #000;
+        }
+
+        h3 {
+            color: #000;
         }
 
         p {
             color: #555;
         }
 
-        code {
-            font-family: 'Courier New', monospace;
-            background-color: #f8f9fa;
-            padding: 2px 4px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .overview {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         .endpoint {
@@ -57,18 +61,36 @@
             padding: 1em;
             background-color: #333;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>API Product Description</h1>
+        <h1>API Description</h1>
     </header>
 
     <section>
+        <div class="overview">
+            <h2>Overview</h2>
+            <p>This API provides functionality for managing products. It allows you to retrieve information about products, as well as create new ones.</p>
+        </div>
+
+        <div class="overview">
+            <h2>Business Goal</h2>
+            <p>The primary business goal of this API is to facilitate seamless management of products, enabling users to efficiently retrieve product information and create new products. It aims to enhance the overall user experience and support business processes related to product management.</p>
+        </div>
+
+        <div class="overview">
+            <h2>Request Limitations</h2>
+            <p>There is a daily limit on the number of requests that can be made to this API. Please refer to the API documentation or contact support for information on request limitations and rate limits.</p>
+        </div>
+
         <div class="endpoint">
             <h2>GET /products/{product_id}</h2>
             <p>Retrieve information about a specific product.</p>
@@ -86,10 +108,18 @@
             <h3>Response</h3>
             <code>{ "id": 456, "name": "New Product", "price": 29.99 }</code>
         </div>
+
+        <div class="endpoint">
+            <h2>Error Handling</h2>
+            <p>The API returns appropriate HTTP status codes to indicate the success or failure of a request. In case of an error, additional information may be provided in the response body.</p>
+            <h3>Example Error Response</h3>
+            <code>{ "error": { "code": 404, "message": "Product not found" } }</code>
+        </div>
+
     </section>
 
     <footer class="footer">
-        &copy; 2024 API Product Description
+        &copy; 2024 API Description
     </footer>
 </body>
 </html>
